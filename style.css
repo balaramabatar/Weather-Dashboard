@@ -1,0 +1,102 @@
+/* Import 'Inter', a standard font for professional dashboards */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+    background-color: #f1f5f9; /* Clean, subtle slate background */
+    font-family: 'Inter', sans-serif;
+    color: #0f172a; /* Dark slate text for high contrast and readability */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.card {
+    background: #ffffff;
+    padding: 2.5rem;
+    border-radius: 12px;
+    /* A very subtle, realistic shadow */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    border: 1px solid #e2e8f0;
+    width: 550px; 
+    max-width: 100%;
+    /* We will use a colored top-border to indicate weather instead of the whole background */
+    border-top: 5px solid #3b82f6; 
+    transition: border-top-color 0.4s ease;
+}
+
+.search-box {
+    margin-bottom: 2rem;
+    display: flex;
+    gap: 12px;
+}
+
+input {
+    padding: 12px 16px;
+    width: 100%;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    outline: none;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    transition: border-color 0.2s;
+}
+
+input:focus {
+    border-color: #3b82f6; /* Highlights blue when typing */
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+button {
+    padding: 12px 24px;
+    background-color: #0f172a; /* Sleek, dark primary button */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #334155;
+}
+
+.current-weather {
+    text-align: left;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.current-weather h3 {
+    margin: 0 0 8px 0;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.current-weather p {
+    margin: 4px 0;
+    font-size: 1.05rem;
+    color: #475569; /* Slightly muted text for data points */
+}
+
+/* Map specific styling */
+#map {
+    height: 250px;
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    border: 1px solid #e2e8f0;
+    z-index: 1; /* Keeps the map from overlapping other elements */
+}
+
+.chart-container {
+    width: 100%;
+    margin-top: 15px;
+}
