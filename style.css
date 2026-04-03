@@ -44,6 +44,11 @@ body {
     font-size: 4rem;
     font-weight: 800;
     margin: 0;
+    /* --- ADD THESE --- */
+    line-height: 1;            /* Shrinks the vertical hitbox */
+    margin-bottom: 20px;       /* Pushes the search bar away slightly */
+    pointer-events: none;      /* Makes the text "ghost-like" to clicks */
+    
     background: linear-gradient(90deg, #3b82f6, #10b981);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -52,7 +57,7 @@ body {
 /* 🌟 Nav Container Layering */
 .nav-container {
     position: fixed;
-    top: 55%;
+    top: 55%; 
     left: 50%;
     transform: translate(-50%, -50%);
     width: 650px;
@@ -60,7 +65,9 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 1000; /* High layer for interaction */
+    /* --- ENSURE THESE --- */
+    z-index: 1000;             /* Higher than welcome text */
+    pointer-events: all;       /* Ensures interaction is on */
     transition: 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
